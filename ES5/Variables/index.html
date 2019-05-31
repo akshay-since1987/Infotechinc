@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Variables</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<section>
+		<h1 id="declaration">Declaration</h1>
+		<article>
+			<p>In Many languages you declare variables like <code>int x = 10;</code>, but in Javascript it always has to be <code>var x = 10;</code> and Javascript will always recognize the type of the variable inherently.</p>
+			<p>
+				Examples of variables
+				<ul>
+					<li>
+						<code>var x = undefined;</code>
+					</li>
+					<li>
+						<code>var x = 10;</code>
+					</li>
+					<li>
+						<code>var x = 10.2;</code>
+					</li>
+					<li>
+						<code>var x = "Some String";</code>
+					</li>
+					<li>
+						<code>var x = "C";</code>
+					</li>
+					<li>
+						<code>var x = 'Some String again';</code>
+					</li>
+					<li>
+						<code>var x = 'C';</code>
+					</li>
+					<li>
+						<code>var x = 10e2;</code>
+					</li>
+					<li>
+						<code>var x = ["a", "b", 3, 4, "e", "6","10e3"];</code>
+					</li>
+					<li>
+						<code>var x = {a: "B"}</code>
+					</li>
+				</ul>
+			</p>
+		</article>
+	</section>
+	<section>
+		<h1 id="definition"></h1>
+		<article>
+			<p>In Many languages you define variables like <code>int x = 10;</code>, but in Javascript it always has to be <code>var x = 10;</code> and Javascript will always recognize the type of the variable inherently. And you can always override any variable type with any other.
+			</p>
+			<p>
+				Examples of variables
+				<code>var x = undefined;<br>.. Some Other Statements and Code ..<br>var x = "Something else";</code> is absolutely correct way of doing things if you choose so.
+			</p>
+		</article>
+	</section>
+	<section>
+		<h1 id="types">Types of Variable and Some fun</h1>
+		<article>
+			<p>That leads us to Types. What decides the type of the Variables?</p>
+
+			<p>The type of the variable is always determined by the current value it holds.</p>
+			<p>
+				Examples:
+				<pre>
+				var x;
+				console.log(typeof x);
+				var x = 0;
+				console.log(typeof x);
+				var x = 10;
+				console.log(typeof x);
+				var x = 10.2
+				console.log(typeof x);
+				var x = "String";
+				console.log(typeof x);
+				var x = "S";
+				console.log(typeof x);
+				var x = 'S';
+				console.log(typeof x);
+				var x = [1,2,3];
+				console.log(typeof x);
+				var x = ['a',"b", "C"];
+				console.log(typeof x);
+				var x = ["A", 1, 2];
+				console.log(typeof x);
+				var x = {a: "b"};
+				console.log(typeof x);
+			</pre>
+			<h2>Some funny stuff and explanation.</h2>
+			<br>
+			<pre>
+				var x = 1 / "A";
+				console.log(typeof x);
+				var x = {} / [];
+				console.log(typeof x);
+				var x = [] / [];
+				console.log(typeof x);
+				var x = [] + {};
+				console.log(typeof x);
+				var x = {} + [];
+				console.log(typeof x);
+				var x = [] - {};
+				console.log(typeof x);
+				var x = {} - [];
+				console.log(typeof x);
+			</pre>
+			<h2>Now Lets see why?</h2>
+			<br>
+			<pre>
+				console.log(1 / "A");
+				console.log({} / []);
+				console.log([]/[]);
+				console.log([]*[]);
+				console.log([] + {});
+				console.log({} + []);
+				console.log([] - {});
+			</pre>
+			</p>
+		</article>
+	</section>
+</body>
+</html>
