@@ -8,26 +8,52 @@
 </head>
 <body>
     <section>
-        <h1 id="regular">Regular Functions</h1>
+        <h2 id="regular">Regular Functions</h3>
         <article>
             <p>
-                <h2 id="function">Function</h2>
+                <h3 id="function">Function</h3>
                 <code>
-function functionName(param1, param2) {
-    
+function functionName(param1, param2....) {
+
 }
-                </code>
-                <h2 id="variableFunction"></h2>
-            </p>
-        </article>
+            </code>
+            <h3 id="variableFunction">A Variable Function</h3>
+            <code>
+var functionName = function (param1, param2 ...) {
+
+}
+            </code>
+        </p>
+    </article>
+    <article>
         <h1 id="classes">Functions as Classes</h1>
-        <article>
-            <p></p>
-        </article>
+        <p>
+            <code>
+function Student (firstName, middleName, lastName) {
+    var middleName = middleName;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.getFullName = function () {
+        return this.firstName + " " + middleName + " " + this.lastName;
+    }
+    this.greetsWelcome = function () {
+        return this.firstName + " says \"Hello\"";
+    }
+}
+var akshay = new Student("Akshay", "Rajendra", "Khandelwal");
+akshay.getFullName();
+            </code>
+        </p>
+    </article>
+    <article>
         <h1 id="iiaf">Immediately Invoked Anonymous Function</h1>
-        <article>
-            <p></p>
-        </article>
+        <p>
+            <code>
+(function () {
+    console.log("Some Self Executable Function");
+})();
+            </code>
+        </p>
     </section>
 </body>
 </html>

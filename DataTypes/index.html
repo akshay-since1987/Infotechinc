@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Datatypes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/common.css" rel="stylesheet"/>
+</head>
+<body>
+    <section>
+        <h1 id="datatypes">Datatypes</h1>
+        <article>
+            <p>
+                JavaScript has dynamic types. This means that the same variable can be used to hold different data types.
+            </p>
+            <!-- <p>
+                Strings are written with quotes. You can use single or double quotes.
+            </p>
+            <p>
+                Numbers can be written with, or without decimals
+            </p> -->
+        </article>
+        <article>
+            <h3 id="object">Objects</h3>
+            <p>
+                <code>
+var person = {
+                firstName:"John", 
+                lastName:"Doe", 
+                age:50, 
+                eyeColor:"blue"
+            };
+                </code>
+            </p>
+        </article>
+        <article>
+            <h3 id="number">Number</h3>
+            <p>
+                In Javascript, Any type of "Number" is just a number. There's no Integer, Decimal, Float, BigInt, SmallInt, etc in Javascript.
+                <code>
+var x = 10;
+var y = 0.2;
+var z = Infinity;
+var a = 2 / 0; // == Infinity
+                </code>
+            </p>
+        </article>
+        <article>
+            <h3 id="string">Strings</h3>
+            <p>
+                Javascript "char" is a String. There's no Character datatype in JS. Also, String can be denoted by Single Quote ('') or Double Quote ("") in JS. 
+            </p>
+            <p>
+                Strings are immutable. You cannot change a character within a string with something like var myString = "abbdef"; myString[2] = 'c'. The string manipulation methods such as trim, slice return new strings.
+            </p>
+            <p>
+                In the same way, if you have two references to the same string, modifying one doesn't affect the other
+            </p>
+            <p>
+                So all that said, Strings are assigned by reference, not by value.
+            </p>
+            <p>
+                You may use single or double Quotes for strings but as a standard, developers prefer using one notation tending towards use of Double Quotes
+                <code>
+var a = 'char';                                 // "char" is a String
+var b = 'c';                                    // "c" is a String
+var c = "String";                               // "String" is a String
+var d = "S";                                    // "S" is a String
+var e = 's' + "tring";                          // "string" is a String
+var f = ['s', 't', 'r',"i",'n','g'].join();     // "string" is a String
+                </code>
+            </p>
+
+        </article>
+    </section>
+</body>
+</html>
