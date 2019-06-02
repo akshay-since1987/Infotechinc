@@ -8,7 +8,7 @@ app.use(serveStatic(path.resolve(__dirname, '../'), {
     dotfiles: 'ignore',
     etag: false,
     extensions: ['htm', 'html', "css","js", "jpg","png","gif","woff","ttf", "otf", "woff2", "eot"],
-    index: false,
+    index: ['index.html'],
     maxAge: '1d',
     redirect: false,
     setHeaders: function (res, path, stat) {
