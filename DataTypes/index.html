@@ -70,6 +70,63 @@ var e = 's' + "tring";                          // "string" is a String
 var f = ['s', 't', 'r',"i",'n','g'].join();     // "string" is a String
                 </code>
             </p>
+        </article>
+        <article>
+            <h3 id="bool">Bool or Boolean</h3>
+            <p>
+                As always boolean can contain only 2 values <b>true</b> or <b>false</b>.
+            </p>
+            <p>
+                <strong>Word of Caution: </strong> Do not confuse with "truthy" (Indicates that this variable will always have value even if the value is "0" or "undefined" or [] or "false") and "falsey" (Indicates that the variable maybe null or undefined) values that developers talk about. Truthy/Falsey are the values that are refered and not the type. In order to avoid confusion during coding always use double inversion as (!!somevariable). This will ;ensure you always get true or false and not "truthy/falsey" values.
+            </p>
+            <p>
+                Note in examples below that <b>As long as the variable returns a value that is not undefined or null or false or 0, Double inversion causes it to return true</b>.
+            </p>
+            <p>
+                <code>
+var x = false;                          // false
+var y = true;                           // true
+var somevar = 0;                        // 0 is a number not <b>boolean</b>
+var z = !!somevar;                      // Double inversion of 0 results in <b> false </b>
+var a = !!true;                         // Double inversion of true is <b>true</b>
+var b = !!undefined;                    // Double inversion of string undefined is <b>true</b>
+var c = !!"string";                     // Double inversion of any string is <b>true</b>
+var d = !!"false";                      // Double inversion of false as a string is also <b>true</b>
+var e = !![];                           // Double inversion of empty array is <b>true</b>
+var f = !!['s','t','r', 'i', 'n', 'g']; // Double inversion of array with values is <b>true</b>
+var g = !!null;                         // Double inversion of null is <b>false</b>
+var h = !!undefined;                    // Double inversion of undefined is <b>false</b>
+var i = !!{};                           // Double inversion of Object is <b>true</b>
+                </code>
+            </p>
+        </article>
+        <article>
+            <h3 id="undefined">Undefined</h3>
+            <p>
+                In Javascript, we have a special type <b>Undefined</b>, unlike many other languages.
+                A variable when declared is always set with undefined value (This will be explained later in sessions covering Scope and Variable hoisting).
+            </p>
+            <code>
+var x;                  // x is undefined
+var y = undefined       // y is undefined
+var z = "undefined"     // z is a string <b>NOT undefined</b>
+            </code>
+        </article>
+    </section>
+    <section>
+        <article>
+            <h1 id="typeof">Typeof Operator</h1>
+            <p>
+                <b>typeof</b> Operator in JS is used to determine the type of object
+                <code>
+typeof x;               // x is undefined
+typeof "string";        // "string" is a string
+typeof true;            // true is a boolean
+typeof 0.002;           // 0.002 is a number
+typeof ["a"];           // ["a"] is an array
+typeof {};              // {} is an object
+                </code>
+            </p>
 
         </article>
     </section>
