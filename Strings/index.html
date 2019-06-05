@@ -7,6 +7,98 @@
 	<link href="/common.css" rel="stylesheet"/>
 </head>
 <body>
-	
+	<section>
+		<h1 id="description">Strings</h1>
+		<article>
+			<p>
+                Javascript "char" is a String. There's no Character datatype in JS. Also, String can be denoted by Single Quote ('') or Double Quote ("") in JS. 
+            </p>
+            <p>
+                Strings are immutable. You cannot change a character within a string with something like var myString = "abbdef"; myString[2] = 'c'. The string manipulation methods such as trim, slice return new strings.
+            </p>
+            <p>
+                In the same way, if you have two references to the same string, modifying one doesn't affect the other
+            </p>
+            <p>
+                So all that said, Strings are assigned by reference, not by value.
+            </p>
+            <p>
+                You may use single or double Quotes for strings but as a standard, developers prefer using one notation tending towards use of Double Quotes
+            </p>
+        </article>
+        <article>
+        	<h2 id="stringoperations">Operations</h2>
+        	<p>
+        		<h3>Concatenation</h3>
+        		<code>
+var a = 'a';
+var b = 'b';
+var c = a + b;
+				</code>
+        	</p>
+        	<p>
+        		<h3>Comparison</h3>
+        		<code>
+var a = 'a';
+var b = 'b';
+if (a < b) { // true
+  console.log(a + ' is less than ' + b);
+} else if (a > b) {
+  console.log(a + ' is greater than ' + b);
+} else {
+  console.log(a + ' and ' + b + ' are equal.');
+}
+        		</code>
+        	</p>
+        </article>
+        <article>
+        	<h2 id="escaping">Escaping strings</h2>
+        	<p>
+        		Sometimes, your code will include strings which are very long. Rather than having lines that go on endlessly, or wrap at the whim of your editor, you may wish to specifically break the string into multiple lines in the source code without affecting the actual string contents. There are two ways you can do this.
+        	</p>
+        	<p>
+				You can use the + operator to append multiple strings together, like below using String Concat:
+        		<code>
+var longString = "This is a very long string which needs " +
+"to wrap across multiple lines because " +
+"otherwise my code is unreadable.";
+        		</code>
+			</p>
+			<p>
+				Or you could do this:
+				<code>
+var longString = "This is a very long string which needs \
+to wrap across multiple lines because \
+otherwise my code is unreadable.";
+				</code>
+        	</p>
+        </article>
+        <article>
+        	<h2 id="templating">Templating</h2>
+        	<p>
+        		Starting with ECMAScript 2015, string literals can also be so-called Template literals:
+        		<code>
+`hello world`
+`hello!
+ world!`
+`hello ${who}`
+tag `<a href="\user\${who}">${who}</a>`
+        		</code>
+        		What do you use it for?
+				<code>
+var me = {
+    firstName: "Maya",
+    lastName: "Shavin",
+}
+function saysHi (obj) {
+	return `Hi there, I'm ${obj.firstName} ${obj.lastName}`;
+}
+console.log(saysHi(me));
+<!-- document.getElementById('output').innerHTML = personTemplate(person); -->
+				</code>
+
+        	</p>
+        </article>
+    </section>
 </body>
 </html>
